@@ -14,8 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
-import android.util.TypedValue;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -45,10 +44,13 @@ public class ArticleListActivity extends ActionBarActivity implements
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
-
-        final View toolbarContainerView = findViewById(R.id.toolbar_container);
-
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
+            }
+        });
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         getLoaderManager().initLoader(0, null, this);
@@ -88,6 +90,8 @@ public class ArticleListActivity extends ActionBarActivity implements
     };
 
     private void updateRefreshingUI() {
+
+        Log.d("Vitor", "refresing"+mIsRefreshing);
         mSwipeRefreshLayout.setRefreshing(mIsRefreshing);
     }
 
