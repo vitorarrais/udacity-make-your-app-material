@@ -3,17 +3,17 @@ package com.example.xyzreader.ui;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
@@ -101,6 +101,16 @@ public class ArticleDetailActivity extends ActionBarActivity
                 }
             });
         }
+
+        findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(ArticleDetailActivity.this)
+                        .setType("text/plain")
+                        .setText("Some sample text")
+                        .getIntent(), getString(R.string.action_share)));
+            }
+        });
 
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
