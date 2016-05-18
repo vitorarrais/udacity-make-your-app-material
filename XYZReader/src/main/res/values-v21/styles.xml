@@ -27,6 +27,11 @@
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorAccent">@color/colorAccent</item>
 
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.Grid" parent="AppTheme">
+        <item name="android:windowExitTransition">@transition/grid_exit</item>
     </style>
 
     <style name="Theme.Bacon.Detail">

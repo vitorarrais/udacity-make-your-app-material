@@ -29,7 +29,11 @@
 
         <item name="android:textColor">@color/primaryText</item>
         <item name="android:textColorSecondary">@color/secondaryText</item>
+        
+
     </style>
+
+    <style name="AppTheme.Grid" parent="AppTheme" />
 
     <style name="AppTheme.Text.Normal" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">sans-serif</item>
