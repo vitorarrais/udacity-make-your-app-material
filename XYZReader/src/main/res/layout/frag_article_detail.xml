@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="#fff"
+            android:background="@color/white"
             android:elevation="2dp"
             android:maxWidth="@dimen/detail_card_max_width"
             android:orientation="vertical">
@@ -41,7 +41,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:lineSpacingMultiplier="0.9"
                     android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                    android:textColor="#fff"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/detail_title_text_size"
                     android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                     style="?android:attr/textAppearanceSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8fff" />
+                    android:textColor="@color/text_color_byline" />
             </LinearLayout>
 
             <TextView
@@ -78,8 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="@dimen/collapsing_toolbar_title_margin_end"
+            app:expandedTitleMarginStart="@dimen/collapsing_toolbar_title_margin_start"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <FrameLayout
@@ -109,7 +109,7 @@
                 android:layout_height="54dp"
                 android:layout_marginLeft="@dimen/list_toolbar_side_margin"
                 android:layout_marginRight="@dimen/list_toolbar_side_margin"
-                android:elevation="8dp"
+                android:elevation="@dimen/toolbar_elevation"
                 app:layout_collapseMode="pin"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>

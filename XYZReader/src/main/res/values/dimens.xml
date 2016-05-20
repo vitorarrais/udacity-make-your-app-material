@@ -11,5 +11,9 @@
     <dimen name="list_bottom_margin">28dp</dimen>
 
     <dimen name="actionbarSize">54dp</dimen>
+    <dimen name="action_up_width">56dp</dimen>
+    <dimen name="toolbar_elevation">8dp</dimen>
+    <dimen name="collapsing_toolbar_title_margin_end">64dp</dimen>
+    <dimen name="collapsing_toolbar_title_margin_start">48dp</dimen>
 
 </resources>

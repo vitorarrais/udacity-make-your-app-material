@@ -11,7 +11,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="@dimen/list_toolbar_side_margin"
         android:layout_marginRight="@dimen/list_toolbar_side_margin"
-        android:elevation="8dp"
+        android:elevation="@dimen/toolbar_elevation"
         android:background="@color/colorPrimary"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
