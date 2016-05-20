@@ -34,5 +34,6 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
+        app:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"/>
 </FrameLayout>
